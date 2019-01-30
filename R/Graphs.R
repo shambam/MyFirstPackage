@@ -4,5 +4,5 @@
 #'
 MakeHeatMap <- function(sco){
   var.data <- sco@data[sco@var.genes,] # this is a comment
-  pheatmap(var.data,scale="row")
+  pheatmap(var.data,scale="row") # another comment
 }
