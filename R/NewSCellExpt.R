@@ -3,7 +3,7 @@
 #'@export ReadNewSCell
 #'
 ReadNewSCell <- function(FileIn){
-  datain <- read.delim(FileIn,row.names=1,header=T,sep="")
+  datain <- read.delim(FileIn,row.names=1,header=T,sep="\t")
   newscell <- new("scell",data=as.matrix(datain))
   newscell
 }
