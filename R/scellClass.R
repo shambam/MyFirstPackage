@@ -9,6 +9,7 @@ setClass("scell",
            genes='data.frame',
            var.genes="character",
            tsne="matrix",
-           facs="matrix"
+           facs="matrix",
+           clusters="vector"
            )
          )

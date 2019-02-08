@@ -1,8 +1,9 @@
 #'Calculates the top N variable genes from a scell object
 #'@param sco An scell S4 object
 #'@param nvar The number of genes we wish to retrieve
-#'@export get.var.genes
-get.var.genes <- function(sco,nvar){
+#'@export GetVarGenes
+
+GetVarGenes <- function(sco,nvar){
   
   genes.var <- apply(sco@data,1,var)
   top.var.genes <- names(rev(sort(genes.var))[1:nvar])
