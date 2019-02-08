@@ -2,7 +2,7 @@
 % Please edit documentation in R/Clustering.R
 \name{clusterData}
 \alias{clusterData}
-\title{Clusters the data and splits the dendrogram inot N clusters}
+\title{Clusters the data and splits the dendrogram into k clusters}
 \usage{
 clusterData(sco, k)
 }
@@ -12,5 +12,5 @@ clusterData(sco, k)
 \item{k}{The number of clusters we wish to retrieve}
 }
 \description{
-Clusters the data and splits the dendrogram inot N clusters
+Clusters the data and splits the dendrogram into k clusters
 }
