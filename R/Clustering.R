@@ -4,7 +4,7 @@
 #'@export clusterCells
 clusterCells <- function(sco,k){
   
-  hc <- hclust(as.dist(1-cor(t(sco$data))))
+  hc <- hclust(as.dist(1-cor(t(sco@data))))
   sco@clusters <- cutree(hc,k)
   sco
 }
