@@ -10,6 +10,6 @@ setClass("scell",
            var.genes="character",
            tsne="matrix",
            facs="matrix",
-           clusters="vector"
+           cell.clusters="vector"
            )
          )
