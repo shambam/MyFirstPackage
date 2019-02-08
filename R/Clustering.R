@@ -4,8 +4,8 @@
 #'@export clusterData
 clusterData <- function(sco,k){
   
-  d.scaled <- scale(sco@data) #scales the data per row
-  clust <- cutree(hclust(dist(d.scaled)),k)
-  sco@clusters <- clust
+  hc <- hclust(as.dist(1-cor(t(sco$data)))
+  
+  sco@clusters <- cutree(hc,k)
   sco
 }
