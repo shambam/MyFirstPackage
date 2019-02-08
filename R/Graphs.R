@@ -14,4 +14,13 @@ MakeHeatMap <- function(sco){
 #'
 ViolinPlotFACSfromCluster <- function(sco,clusID){
   
+  req.cell <- which(sco@cell.clusters==clusID)
+  
+  req.facs <- sco@facs[,req.cell]
+  req.facs  <- as.data.frame(t(req.facs))
+
+  #vio.data <- as.list(as.data.frame(t(req.facs)))
+  vioplot(req.facs,names=colnames(req.facs),main=paste("FACS data from cluster ",clusID))
+  #print(names(vio.data))
+
 }

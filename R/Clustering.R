@@ -8,3 +8,4 @@ clusterCells <- function(sco,k){
   sco@cell.clusters <- cutree(hc,k)
   sco
 }
+
