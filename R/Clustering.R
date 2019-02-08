@@ -1,7 +1,7 @@
 #'Clusters the data and splits the dendrogram inot N clusters
 #'@param sco An scell S4 object
 #'@param k The number of clusters we wish to retrieve
-#'@export get.var.genes
+#'@export clusterData
 clusterData <- function(sco,k){
   
   d.scaled <- scale(sco@data) #scales the data per row
