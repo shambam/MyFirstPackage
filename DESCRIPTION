@@ -14,7 +14,8 @@ Depends: R (>= 3.5.0),
   ggplot2,
   Rtsne,
   rgl,
-  vioplot
+  vioplot,
+  RColorBrewer
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
