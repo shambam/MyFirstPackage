@@ -36,3 +36,19 @@ ColourTSNEbyClust <- function(sco){
   colrs <- brewer.pal(max(hspc@cell.clusters), "Set1") #make as many colours as we have clusters Set1 is a range of divergent colours
   rgl.points(sco@tsne,col=colrs[sco@cell.clusters]) # the last part makes a vector of the colours from the cluster information.
 }
+
+
+#'Makes a 3D tSNE plot where cells are coloured by the expression of a given gene
+#'@param sco
+#'@param gene
+#'@export ColourTSNEbyGeneExpr
+
+ColourTSNEbyGeneExpr <- function(sco,gene){
+
+  values <- sco@data[gene,]
+
+  ii <- cut(values, breaks = seq(min(values), max(values), len = 100), include.lowest = TRUE)
+  colors <- colorRampPalette(c("lightblue","yellow", "red"))(99)[ii]
+  
+  rgl.points(sco@tsne,col=colors)
+}

@@ -2,6 +2,7 @@
 
 export(CalcTSNE)
 export(ColourTSNEbyClust)
+export(ColourTSNEbyGeneExpr)
 export(GetVarGenes)
 export(MakeHeatMap)
 export(ReadNewSCell)
